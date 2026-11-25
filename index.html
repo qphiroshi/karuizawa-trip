@@ -6,8 +6,10 @@
   <title>12/25 軽井沢クリスマス散策プラン | Karuizawa Winter Stroll</title>
   <meta name="description" content="12月25日 10:12〜14:00 大人4人で楽しむ冬の軽井沢マイカー散策プラン（グラナダ軽井沢ランチほか全3案・上山田温泉15:00チェックイン対応）">
   <meta property="og:title" content="12/25 軽井沢クリスマス散策プラン | Karuizawa Trip">
-  <meta property="og:description" content="10:12 軽井沢駅合流 → 冬の軽井沢散策＆ランチ（全3プラン比較） → 15:00 上山田温泉チェックイン。日英切替・Googleマップ連動。">
+  <meta property="og:description" content="10:12 軽井沢駅合流 → 冬の軽井沢散策＆ランチ（全3プラン比較） → 15:00 上山田温泉チェックイン。写真・ルート図・日英切替つき。">
+  <meta property="og:image" content="./images/og-cover.jpg">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="format-detection" content="telephone=no">
   <style>
     *, *::before, *::after {
@@ -21,23 +23,22 @@
 
     body.guide-page {
       --bg-paper: hsl(38, 33%, 97%);
-      --bg-warm: hsl(36, 25%, 93%);
+      --bg-warm: hsl(36, 25%, 92%);
       --bg-surface: hsl(0, 0%, 100%);
-      --bg-pine: hsl(156, 33%, 18%);
+      --bg-pine: hsl(156, 34%, 18%);
       --bg-pine-soft: hsl(154, 24%, 93%);
       --bg-berry-soft: hsl(14, 52%, 95%);
       --bg-amber-soft: hsl(38, 70%, 94%);
       --ink-primary: hsl(155, 18%, 14%);
-      --ink-secondary: hsl(155, 10%, 34%);
+      --ink-secondary: hsl(155, 10%, 33%);
       --ink-muted: hsl(155, 8%, 46%);
-      --accent-pine: hsl(156, 33%, 20%);
-      --accent-pine-hover: hsl(156, 35%, 14%);
-      --accent-berry: hsl(13, 56%, 40%);
-      --accent-gold: hsl(35, 62%, 36%);
+      --accent-pine: hsl(156, 34%, 20%);
+      --accent-berry: hsl(13, 58%, 40%);
+      --accent-gold: hsl(35, 62%, 35%);
       --line-subtle: hsl(35, 18%, 86%);
       --line-strong: hsl(35, 16%, 76%);
-      --shadow-soft: 0 2px 12px rgba(24, 38, 32, 0.05);
-      --shadow-elevated: 0 8px 28px rgba(24, 38, 32, 0.08);
+      --shadow-soft: 0 2px 14px rgba(20, 34, 28, 0.06);
+      --shadow-elevated: 0 12px 34px rgba(20, 34, 28, 0.10);
       --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", Georgia, serif;
       --font-sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
 
@@ -47,7 +48,7 @@
       color: var(--ink-primary);
       font-family: var(--font-sans);
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.72;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -65,13 +66,13 @@
       top: 0;
       z-index: 100;
       background-color: rgba(250, 248, 244, 0.92);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line-subtle);
     }
 
     .header-inner {
-      max-width: 820px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 10px 16px;
       display: flex;
@@ -85,7 +86,7 @@
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent-pine);
       letter-spacing: 0.03em;
       min-width: 0;
@@ -109,19 +110,13 @@
       text-overflow: ellipsis;
     }
 
-    .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
     .lang-switcher {
       display: inline-flex;
       background-color: var(--bg-warm);
       padding: 3px;
       border-radius: 8px;
       border: 1px solid var(--line-subtle);
+      flex-shrink: 0;
     }
 
     .lang-btn {
@@ -131,8 +126,8 @@
       color: var(--ink-secondary);
       font-family: inherit;
       font-size: 12.5px;
-      font-weight: 600;
-      padding: 5px 11px;
+      font-weight: 700;
+      padding: 5px 12px;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
@@ -146,47 +141,96 @@
     .lang-btn[aria-pressed="true"] {
       background-color: var(--bg-pine);
       color: #ffffff;
-      box-shadow: 0 1px 4px rgba(20, 36, 30, 0.18);
+      box-shadow: 0 1px 4px rgba(20, 36, 30, 0.22);
     }
 
     /* Main Container */
     .main-container {
-      max-width: 820px;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 28px 16px 64px;
+      padding: 20px 16px 68px;
     }
 
-    /* Hero Section */
-    .hero-section {
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--line-subtle);
-      margin-bottom: 24px;
+    /* Full-Photo Hero Card */
+    .hero-banner {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-elevated);
+      margin-bottom: 18px;
+      background-color: var(--bg-pine);
+      min-height: 290px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    @media (min-width: 640px) {
+      .hero-banner {
+        min-height: 370px;
+      }
+    }
+
+    .hero-banner-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      display: block;
+    }
+
+    .hero-banner-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(14, 28, 22, 0.88) 0%,
+        rgba(14, 28, 22, 0.52) 48%,
+        rgba(14, 28, 22, 0.12) 100%
+      );
+    }
+
+    .hero-banner-content {
+      position: relative;
+      z-index: 2;
+      padding: 24px 20px;
+      width: 100%;
+      color: #ffffff;
+    }
+
+    @media (min-width: 640px) {
+      .hero-banner-content {
+        padding: 34px 34px 30px;
+      }
     }
 
     .hero-kicker {
       margin: 0 0 8px;
-      font-size: 12.5px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent-berry);
+      color: hsl(40, 82%, 82%);
     }
 
     .hero-title {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       font-family: var(--font-serif);
-      font-size: clamp(24px, 5vw, 34px);
+      font-size: clamp(23px, 4.8vw, 35px);
       font-weight: 700;
-      line-height: 1.32;
-      letter-spacing: 0.01em;
-      color: var(--ink-primary);
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
     }
 
     .hero-lead {
-      margin: 0 0 20px;
-      color: var(--ink-secondary);
-      font-size: 14.5px;
-      line-height: 1.75;
+      margin: 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 14px;
+      line-height: 1.68;
     }
 
     /* Summary Strip */
@@ -194,7 +238,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     @media (min-width: 640px) {
@@ -206,15 +250,15 @@
     .overview-item {
       background-color: var(--bg-surface);
       border: 1px solid var(--line-subtle);
-      border-radius: 10px;
-      padding: 12px 14px;
+      border-radius: 12px;
+      padding: 13px 14px;
       box-shadow: var(--shadow-soft);
     }
 
     .overview-label {
       display: block;
       font-size: 11.5px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--ink-muted);
       margin-bottom: 3px;
       letter-spacing: 0.03em;
@@ -236,96 +280,91 @@
       line-height: 1.35;
     }
 
-    /* Visual Route Flow Banner */
-    .route-banner {
-      background-color: var(--bg-pine-soft);
-      border: 1px solid hsl(154, 20%, 84%);
-      border-radius: 12px;
-      padding: 14px 16px;
-    }
-
-    .route-banner-title {
-      margin: 0 0 10px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--accent-pine);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .route-steps {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
+    /* Illustrated SVG Route Map Card */
+    .map-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--line-subtle);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 30px;
     }
 
     @media (min-width: 640px) {
-      .route-steps {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+      .map-card {
+        padding: 22px 24px 18px;
       }
     }
 
-    .route-step {
-      background-color: rgba(255, 255, 255, 0.85);
-      border-radius: 8px;
-      padding: 9px 11px;
-      border: 1px solid rgba(31, 61, 49, 0.1);
+    .map-card-header {
       display: flex;
-      flex-direction: column;
-      gap: 2px;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
     }
 
-    .route-step-time {
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--accent-berry);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .route-step-place {
-      font-size: 13px;
+    .map-card-title {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 17px;
       font-weight: 700;
       color: var(--ink-primary);
     }
 
-    .route-step-detail {
-      font-size: 11.5px;
-      color: var(--ink-secondary);
-      line-height: 1.35;
+    .map-card-note {
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    .route-svg-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 12px;
+      background-color: hsl(40, 30%, 96%);
+      border: 1px solid var(--line-subtle);
+      padding: 6px;
+    }
+
+    .route-svg {
+      width: 100%;
+      min-width: 560px;
+      height: auto;
+      display: block;
     }
 
     /* Section Headings */
     .section-heading {
       font-family: var(--font-serif);
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 700;
-      margin: 0 0 14px;
+      margin: 0 0 12px;
       color: var(--ink-primary);
       letter-spacing: 0.02em;
     }
 
-    /* Plan Tabs */
+    /* Visual Photo Plan Selector Cards */
     .plan-tabs-wrap {
       margin-bottom: 20px;
     }
 
     .plan-tabs-hint {
-      margin: 0 0 10px;
-      font-size: 13px;
+      margin: 0 0 12px;
+      font-size: 13.5px;
       color: var(--ink-secondary);
     }
 
     .plan-tabs {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 10px;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 640px) {
       .plan-tabs {
         grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
       }
     }
 
@@ -333,20 +372,29 @@
       appearance: none;
       text-align: left;
       background-color: var(--bg-surface);
-      border: 1px solid var(--line-strong);
-      border-radius: 10px;
-      padding: 12px 14px;
+      border: 1.5px solid var(--line-subtle);
+      border-radius: 14px;
+      padding: 0;
+      overflow: hidden;
       cursor: pointer;
       font-family: inherit;
-      transition: transform 0.15s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.18s ease, background-color 0.18s ease;
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      flex-direction: row;
+      align-items: stretch;
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (min-width: 640px) {
+      .plan-tab-btn {
+        flex-direction: column;
+      }
     }
 
     .plan-tab-btn:hover {
+      transform: translateY(-2px);
       border-color: var(--accent-pine);
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow-elevated);
     }
 
     .plan-tab-btn[aria-selected="true"] {
@@ -354,6 +402,43 @@
       border-color: var(--bg-pine);
       color: #ffffff;
       box-shadow: var(--shadow-elevated);
+    }
+
+    .tab-thumb-wrap {
+      width: 108px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-warm);
+    }
+
+    @media (min-width: 640px) {
+      .tab-thumb-wrap {
+        width: 100%;
+        height: 118px;
+      }
+    }
+
+    .tab-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .plan-tab-btn:hover .tab-thumb-img {
+      transform: scale(1.05);
+    }
+
+    .tab-body {
+      padding: 11px 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
     }
 
     .tab-top-row {
@@ -372,13 +457,13 @@
     }
 
     .plan-tab-btn[aria-selected="true"] .tab-code {
-      color: hsl(42, 75%, 82%);
+      color: hsl(42, 80%, 82%);
     }
 
     .tab-tag {
       font-size: 11px;
-      font-weight: 600;
-      padding: 1px 7px;
+      font-weight: 700;
+      padding: 2px 7px;
       border-radius: 4px;
       background-color: var(--bg-berry-soft);
       color: var(--accent-berry);
@@ -390,10 +475,10 @@
     }
 
     .tab-name {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       color: var(--ink-primary);
-      line-height: 1.35;
+      line-height: 1.38;
     }
 
     .plan-tab-btn[aria-selected="true"] .tab-name {
@@ -405,27 +490,27 @@
       display: none;
       background-color: var(--bg-surface);
       border: 1px solid var(--line-subtle);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 22px 18px;
       box-shadow: var(--shadow-elevated);
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     @media (min-width: 640px) {
       .plan-panel {
-        padding: 28px 28px;
+        padding: 30px 30px;
       }
     }
 
     .plan-panel.is-active {
       display: block;
-      animation: fadePanel 0.22s ease-out;
+      animation: fadePanel 0.24s ease-out;
     }
 
     @keyframes fadePanel {
       from {
         opacity: 0;
-        transform: translateY(4px);
+        transform: translateY(5px);
       }
       to {
         opacity: 1;
@@ -434,7 +519,7 @@
     }
 
     .plan-header {
-      padding-bottom: 16px;
+      padding-bottom: 18px;
       margin-bottom: 20px;
       border-bottom: 1px solid var(--line-subtle);
     }
@@ -449,17 +534,77 @@
     }
 
     .plan-title {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-family: var(--font-serif);
-      font-size: clamp(19px, 3.6vw, 24px);
-      line-height: 1.38;
+      font-size: clamp(19px, 3.6vw, 25px);
+      line-height: 1.36;
       color: var(--ink-primary);
     }
 
     .plan-summary {
-      margin: 0 0 12px;
-      font-size: 14px;
+      margin: 0 0 14px;
+      font-size: 14.5px;
       color: var(--ink-secondary);
+    }
+
+    /* Photo Showcase Grid inside Plan */
+    .photo-showcase {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 16px 0 18px;
+    }
+
+    .photo-showcase.two-col {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 600px) {
+      .photo-showcase.two-col {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .photo-figure {
+      margin: 0;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: var(--bg-warm);
+      border: 1px solid var(--line-subtle);
+    }
+
+    .photo-figure img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-showcase:not(.two-col) .photo-figure img {
+      height: 250px;
+    }
+
+    @media (min-width: 640px) {
+      .photo-figure img {
+        height: 235px;
+      }
+      .photo-showcase:not(.two-col) .photo-figure img {
+        height: 290px;
+      }
+    }
+
+    .photo-caption {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      background-color: var(--bg-paper);
+      border-top: 1px solid var(--line-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
 
     .plan-metrics {
@@ -585,7 +730,7 @@
       margin-bottom: 0;
     }
 
-    /* Action Links (Google Maps / Tel) */
+    /* Action Links */
     .spot-actions {
       display: flex;
       flex-wrap: wrap;
@@ -597,7 +742,7 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      padding: 5px 11px;
+      padding: 6px 12px;
       border-radius: 6px;
       font-size: 12.5px;
       font-weight: 600;
@@ -619,6 +764,72 @@
       flex-shrink: 0;
     }
 
+    /* Onsen Finale Card */
+    .onsen-finale-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--line-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-elevated);
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 640px) {
+      .onsen-finale-card {
+        grid-template-columns: 0.95fr 1.05fr;
+      }
+    }
+
+    .onsen-img-wrap {
+      min-height: 210px;
+      background-color: var(--bg-pine);
+    }
+
+    .onsen-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .onsen-content {
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+      .onsen-content {
+        padding: 24px 28px;
+      }
+    }
+
+    .onsen-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-berry);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .onsen-title {
+      margin: 0 0 8px;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      line-height: 1.35;
+      color: var(--ink-primary);
+    }
+
+    .onsen-desc {
+      margin: 0 0 12px;
+      font-size: 14px;
+      color: var(--ink-secondary);
+      line-height: 1.68;
+    }
+
     /* Comparison Table */
     .comparison-card {
       background-color: var(--bg-surface);
@@ -626,7 +837,7 @@
       border-radius: 14px;
       padding: 20px 16px;
       box-shadow: var(--shadow-soft);
-      margin-bottom: 24px;
+      margin-bottom: 26px;
       overflow-x: auto;
     }
 
@@ -697,10 +908,10 @@
       line-height: 1.65;
     }
 
-    /* Share Footer */
+    /* Footer */
     .page-footer {
       text-align: center;
-      padding-top: 20px;
+      padding-top: 22px;
       border-top: 1px solid var(--line-subtle);
       color: var(--ink-muted);
       font-size: 12.5px;
@@ -721,19 +932,26 @@
       color: var(--ink-primary);
       font-family: inherit;
       font-size: 13px;
-      font-weight: 600;
-      padding: 8px 16px;
+      font-weight: 700;
+      padding: 9px 18px;
       border-radius: 8px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: var(--shadow-soft);
       transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
     .copy-btn:hover {
       border-color: var(--accent-pine);
       background-color: var(--bg-pine-soft);
+    }
+
+    .photo-disclaimer {
+      margin: 6px 0 0;
+      font-size: 11.5px;
+      color: var(--ink-muted);
     }
 
     @media print {
@@ -759,52 +977,55 @@
     <div class="header-inner">
       <div class="brand-label">
         <span class="brand-date">12/25</span>
-        <span class="brand-title-short" lang="ja">軽井沢 散策プラン</span>
-        <span class="brand-title-short" lang="en">Karuizawa Trip Plans</span>
+        <span class="brand-title-short" lang="ja">軽井沢〜上山田温泉 旅のしおり</span>
+        <span class="brand-title-short" lang="en">Karuizawa &amp; Kamiyamada Trip Guide</span>
       </div>
 
-      <div class="header-controls">
-        <div class="lang-switcher" role="group" aria-label="Language switcher">
-          <button type="button" id="btn-lang-ja" class="lang-btn" aria-pressed="true" onclick="setLanguage('ja')">日本語</button>
-          <button type="button" id="btn-lang-en" class="lang-btn" aria-pressed="false" onclick="setLanguage('en')">English</button>
-        </div>
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button type="button" id="btn-lang-ja" class="lang-btn" aria-pressed="true" onclick="setLanguage('ja')">日本語</button>
+        <button type="button" id="btn-lang-en" class="lang-btn" aria-pressed="false" onclick="setLanguage('en')">English</button>
       </div>
     </div>
   </header>
 
   <main class="main-container">
-    <!-- Hero Overview -->
-    <section class="hero-section">
-      <p class="hero-kicker" lang="ja">Christmas Family Trip · Karuizawa to Kamiyamada Onsen</p>
-      <p class="hero-kicker" lang="en">Christmas Family Trip · Karuizawa to Kamiyamada Onsen</p>
-
-      <h1 class="hero-title" lang="ja">12月25日 冬の軽井沢マイカー散策プラン</h1>
-      <h1 class="hero-title" lang="en">Dec 25 Winter Karuizawa Stroll &amp; Lunch Plans</h1>
-
-      <p class="hero-lead" lang="ja">
-        10:12頃に軽井沢駅で合流し、14:00頃まで大人4人で冬の軽井沢を楽しむ3つのモデルプランです。散策後はマイカーで上山田温泉へ向かい、15:00頃にホテルへチェックイン（ご家族2名と合流・計6名）します。
-      </p>
-      <p class="hero-lead" lang="en">
-        Three itinerary options for four adults exploring winter Karuizawa by car from around 10:12 to 14:00. Afterward, everyone drives west to Kamiyamada Onsen for a 15:00 hotel check-in to meet the rest of the family (total of 6).
-      </p>
+    <!-- Hero Photo Banner -->
+    <section aria-label="Overview">
+      <div class="hero-banner">
+        <img class="hero-banner-img" src="./images/hero.jpg" alt="Winter morning sunlight in Karuizawa birch forest">
+        <div class="hero-banner-scrim" aria-hidden="true"></div>
+        <div class="hero-banner-content">
+          <p class="hero-kicker">Christmas Family Trip · Dec 25</p>
+          <h1 class="hero-title">
+            <span lang="ja">12月25日 冬の軽井沢マイカー散策プラン</span>
+            <span lang="en">Dec 25 Winter Karuizawa Stroll &amp; Lunch Plans</span>
+          </h1>
+          <p class="hero-lead" lang="ja">
+            10:12頃に軽井沢駅北口で合流し、14:00頃まで大人4人で冬の軽井沢を楽しむ3つのモデルコース。散策後はマイカーで西へ向かい、15:00頃に上山田温泉のホテルへチェックイン（ご家族2名も合流・計6名）します。
+          </p>
+          <p class="hero-lead" lang="en">
+            Three winter itinerary options for four adults exploring Karuizawa by car from 10:12 to ~14:00, followed by a scenic westbound drive to Kamiyamada Onsen for a 15:00 hotel check-in with the whole family (total of 6).
+          </p>
+        </div>
+      </div>
 
       <div class="overview-grid">
         <div class="overview-item">
-          <span class="overview-label" lang="ja">日時</span>
-          <span class="overview-label" lang="en">Date &amp; Time</span>
+          <span class="overview-label" lang="ja">軽井沢滞在</span>
+          <span class="overview-label" lang="en">Karuizawa Time</span>
           <span class="overview-value" lang="ja">12/25 (金) 10:12–14:00</span>
           <span class="overview-value" lang="en">Fri, Dec 25 · 10:12–14:00</span>
-          <span class="overview-sub" lang="ja">約3時間50分の軽井沢滞在</span>
-          <span class="overview-sub" lang="en">Approx. 3 hr 50 min in Karuizawa</span>
+          <span class="overview-sub" lang="ja">約3時間50分の散策＆ランチ</span>
+          <span class="overview-sub" lang="en">~3 hr 50 min stroll &amp; lunch</span>
         </div>
 
         <div class="overview-item">
-          <span class="overview-label" lang="ja">集合（10:12頃）</span>
+          <span class="overview-label" lang="ja">集合場所（10:12頃）</span>
           <span class="overview-label" lang="en">Meet-up (10:12)</span>
           <span class="overview-value" lang="ja">軽井沢駅 北口</span>
           <span class="overview-value" lang="en">Karuizawa Sta. North Exit</span>
           <span class="overview-sub" lang="ja">高速バス2名 ＋ 飯山から車2名</span>
-          <span class="overview-sub" lang="en">2 by highway bus + 2 by car (Iiyama)</span>
+          <span class="overview-sub" lang="en">2 by highway bus + 2 by car</span>
         </div>
 
         <div class="overview-item">
@@ -813,97 +1034,180 @@
           <span class="overview-value" lang="ja">マイカー（大人4名）</span>
           <span class="overview-value" lang="en">Private Car (4 Adults)</span>
           <span class="overview-sub" lang="ja">冬用タイヤ装着済で安心</span>
-          <span class="overview-sub" lang="en">Equipped with winter snow tires</span>
+          <span class="overview-sub" lang="en">Winter snow tires equipped</span>
         </div>
 
         <div class="overview-item">
-          <span class="overview-label" lang="ja">次の目的地（15:00頃）</span>
-          <span class="overview-label" lang="en">Next Stop (15:00)</span>
+          <span class="overview-label" lang="ja">宿泊先（15:00頃着）</span>
+          <span class="overview-label" lang="en">Check-in (~15:00)</span>
           <span class="overview-value" lang="ja">上山田温泉 ホテル</span>
-          <span class="overview-value" lang="en">Kamiyamada Onsen Hotel</span>
+          <span class="overview-value" lang="en">Kamiyamada Onsen</span>
           <span class="overview-sub" lang="ja">ご家族2名も合流（計6名）</span>
-          <span class="overview-sub" lang="en">2 more family members join (6 total)</span>
+          <span class="overview-sub" lang="en">2 more family members join (6)</span>
         </div>
       </div>
 
-      <!-- Overall Flow Banner -->
-      <div class="route-banner">
-        <p class="route-banner-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
-          <span lang="ja">全体の流れと時間配分のポイント（東から西へ進む無駄のないルート）</span>
-          <span lang="en">Overall Flow &amp; Timing Key (Smooth Westbound Route toward Kamiyamada Onsen)</span>
-        </p>
-        <div class="route-steps">
-          <div class="route-step">
-            <span class="route-step-time">10:12</span>
-            <span class="route-step-place" lang="ja">軽井沢駅北口で合流</span>
-            <span class="route-step-place" lang="en">Meet at Karuizawa Sta.</span>
-            <span class="route-step-detail" lang="ja">北口町営駐車場は30分無料</span>
-            <span class="route-step-detail" lang="en">North Exit municipal lot: 30m free</span>
-          </div>
-          <div class="route-step">
-            <span class="route-step-time">10:25 – 11:30</span>
-            <span class="route-step-place" lang="ja">午前の軽井沢散策</span>
-            <span class="route-step-place" lang="en">Morning Sightseeing</span>
-            <span class="route-step-detail" lang="ja">澄んだ冬の景色・教会・滝など</span>
-            <span class="route-step-detail" lang="en">Crisp winter scenery, church, or falls</span>
-          </div>
-          <div class="route-step">
-            <span class="route-step-time">11:30 – 13:45</span>
-            <span class="route-step-place" lang="ja">ランチ＆お買い物</span>
-            <span class="route-step-place" lang="en">Lunch &amp; Quick Stop</span>
-            <span class="route-step-detail" lang="ja">グラナダ軽井沢ほか＋西へ移動</span>
-            <span class="route-step-detail" lang="en">Granada paella or local dining</span>
-          </div>
-          <div class="route-step">
-            <span class="route-step-time">13:50 – 15:00</span>
-            <span class="route-step-place" lang="ja">上山田温泉へ移動</span>
-            <span class="route-step-place" lang="en">Drive to Kamiyamada</span>
-            <span class="route-step-detail" lang="ja">小諸IC → 坂城IC経由（約50〜70分）</span>
-            <span class="route-step-detail" lang="en">Via Komoro IC to Sakaki IC (50–70m)</span>
-          </div>
+      <!-- Illustrated East-to-West Route Map (Bilingual SVG) -->
+      <div class="map-card">
+        <div class="map-card-header">
+          <h2 class="map-card-title">
+            <span lang="ja">位置関係＆ドライブルート図（東→西へスムーズ移動）</span>
+            <span lang="en">Area &amp; Westbound Drive Map (Karuizawa → Kamiyamada Onsen)</span>
+          </h2>
+          <span class="map-card-note" lang="ja">※上山田温泉は軽井沢の西側（約50〜65分）</span>
+          <span class="map-card-note" lang="en">*Kamiyamada Onsen lies 50–65 min west of Karuizawa</span>
+        </div>
+
+        <div class="route-svg-wrap">
+          <svg class="route-svg" viewBox="0 0 780 215" role="img" aria-label="Route map from Karuizawa Station to Kamiyamada Onsen">
+            <!-- Soft Mt. Asama silhouette in background -->
+            <path d="M410 82 L475 24 L505 24 L575 82 Z" fill="#E3DDD2" opacity="0.7"/>
+            <path d="M475 24 L505 24 L525 42 L495 38 L482 44 L462 39 Z" fill="#FFFFFF"/>
+
+            <!-- Main Westbound Highway / Road Line (East at right -> West at left, or intuitive Left-to-Right chronological flow!) -->
+            <!-- Chronological Left (10:12 Start) -> Right (15:00 Goal) -->
+            <!-- Mountain loop branch to Shiraito Falls -->
+            <path d="M110 128 Q175 42 260 52 Q335 60 390 128" fill="none" stroke="#8FA89B" stroke-width="2.5" stroke-dasharray="5 4"/>
+            <!-- Main Karuizawa -> Naka-Karuizawa -> Miyota -> Expressway -> Kamiyamada line -->
+            <path d="M95 132 L255 132 L395 132 L525 132" fill="none" stroke="#1F3D31" stroke-width="4" stroke-linecap="round"/>
+            <!-- Expressway segment -->
+            <path d="M525 132 L685 132" fill="none" stroke="#A9442D" stroke-width="5" stroke-linecap="round"/>
+
+            <!-- Direction Arrows -->
+            <polygon points="182,132 172,127 172,137" fill="#1F3D31"/>
+            <polygon points="332,132 322,127 322,137" fill="#1F3D31"/>
+            <polygon points="468,132 458,127 458,137" fill="#1F3D31"/>
+            <polygon points="612,132 600,126 600,138" fill="#A9442D"/>
+
+            <!-- Nodes -->
+            <!-- 1. Karuizawa Station & Granada -->
+            <circle cx="95" cy="132" r="10" fill="#1F3D31" stroke="#FFFFFF" stroke-width="3"/>
+            <!-- 2. Kumoba / Old Karuizawa -->
+            <circle cx="255" cy="132" r="8" fill="#FFFFFF" stroke="#1F3D31" stroke-width="3"/>
+            <!-- 2b. Shiraito Falls (top) -->
+            <circle cx="255" cy="52" r="7.5" fill="#FFFFFF" stroke="#5B7F6E" stroke-width="3"/>
+            <!-- 3. Naka-Karuizawa (Hoshino / Tsuruya) -->
+            <circle cx="395" cy="132" r="8" fill="#FFFFFF" stroke="#1F3D31" stroke-width="3"/>
+            <!-- 4. Miyota MMoP / Komoro IC -->
+            <circle cx="525" cy="132" r="8" fill="#FFFFFF" stroke="#A9442D" stroke-width="3"/>
+            <!-- 5. Kamiyamada Onsen Goal -->
+            <circle cx="685" cy="132" r="11" fill="#A9442D" stroke="#FFFFFF" stroke-width="3"/>
+
+            <!-- JAPANESE LABELS -->
+            <g lang="ja" font-family="sans-serif">
+              <text x="490" y="20" text-anchor="middle" font-size="10.5" fill="#6E7772" font-weight="600">浅間山</text>
+
+              <rect x="30" y="90" width="130" height="24" rx="5" fill="#1F3D31"/>
+              <text x="95" y="106" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="700">10:12 軽井沢駅北口</text>
+              <text x="95" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">グラナダ軽井沢 (A)</text>
+              <text x="95" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">駅徒歩2〜3分</text>
+
+              <text x="255" y="34" text-anchor="middle" font-size="11.5" fill="#2F5243" font-weight="700">白糸の滝 (C)</text>
+              <text x="255" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">雲場池(A)・聖パウロ教会(B)</text>
+              <text x="255" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">駅から車5〜7分</text>
+
+              <text x="395" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">星野エリア(B)・ツルヤ(A)</text>
+              <text x="395" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">中軽井沢エリア</text>
+
+              <text x="525" y="112" text-anchor="middle" font-size="11" fill="#A9442D" font-weight="700">14:00頃発</text>
+              <text x="525" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">御代田 MMoP(C) / 小諸IC</text>
+              <text x="525" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">上信越道で坂城ICへ</text>
+
+              <text x="605" y="122" text-anchor="middle" font-size="10.5" fill="#A9442D" font-weight="700">高速 約25分</text>
+
+              <rect x="615" y="88" width="140" height="26" rx="6" fill="#A9442D"/>
+              <text x="685" y="105" text-anchor="middle" font-size="11.5" fill="#FFFFFF" font-weight="700">15:00 上山田温泉</text>
+              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">ホテルで6名全員合流！</text>
+              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">チェックイン＆温泉</text>
+            </g>
+
+            <!-- ENGLISH LABELS -->
+            <g lang="en" font-family="sans-serif">
+              <text x="490" y="20" text-anchor="middle" font-size="10.5" fill="#6E7772" font-weight="600">Mt. Asama</text>
+
+              <rect x="26" y="90" width="138" height="24" rx="5" fill="#1F3D31"/>
+              <text x="95" y="106" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="700">10:12 Karuizawa Sta.</text>
+              <text x="95" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">Granada Karuizawa (A)</text>
+              <text x="95" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">2–3 min walk from Sta.</text>
+
+              <text x="255" y="34" text-anchor="middle" font-size="11.5" fill="#2F5243" font-weight="700">Shiraito Falls (C)</text>
+              <text x="255" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">Kumoba(A) / St. Paul's(B)</text>
+              <text x="255" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">5–7 min drive</text>
+
+              <text x="395" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">Hoshino(B) / Tsuruya(A)</text>
+              <text x="395" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">Naka-Karuizawa</text>
+
+              <text x="525" y="112" text-anchor="middle" font-size="11" fill="#A9442D" font-weight="700">Leave ~14:00</text>
+              <text x="525" y="160" text-anchor="middle" font-size="11.5" fill="#1E2622" font-weight="700">Miyota MMoP(C) / Komoro IC</text>
+              <text x="525" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">Expressway to Sakaki IC</text>
+
+              <text x="605" y="122" text-anchor="middle" font-size="10.5" fill="#A9442D" font-weight="700">Hwy ~25m</text>
+
+              <rect x="610" y="88" width="150" height="26" rx="6" fill="#A9442D"/>
+              <text x="685" y="105" text-anchor="middle" font-size="11.5" fill="#FFFFFF" font-weight="700">15:00 Kamiyamada Onsen</text>
+              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">All 6 Family Members Meet!</text>
+              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">Hotel Check-in &amp; Baths</text>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- Plan Selector Tabs -->
+    <!-- Plan Selector Tabs with Thumbnails -->
     <section aria-labelledby="plans-heading">
-      <h2 id="plans-heading" class="section-heading" lang="ja">選べる3つのモデルプラン</h2>
-      <h2 id="plans-heading-en" class="section-heading" lang="en">Choose from 3 Itinerary Options</h2>
+      <h2 id="plans-heading" class="section-heading">
+        <span lang="ja">写真で見比べる！3つのモデルプラン</span>
+        <span lang="en">Compare 3 Illustrated Itinerary Options</span>
+      </h2>
 
       <div class="plan-tabs-wrap">
-        <p class="plan-tabs-hint" lang="ja">タブをタップすると各プランの詳細スケジュールと地図リンクが表示されます。</p>
-        <p class="plan-tabs-hint" lang="en">Tap a tab below to view the detailed timetable and Google Maps links for each plan.</p>
+        <p class="plan-tabs-hint" lang="ja">気になるカードをタップすると、写真つきの詳細スケジュールとGoogleマップが開きます。</p>
+        <p class="plan-tabs-hint" lang="en">Tap any card below to switch plans and view photos, timetables, and Google Maps links.</p>
 
         <div class="plan-tabs" role="tablist" aria-label="Travel Plans">
           <button type="button" role="tab" id="tab-plan-a" class="plan-tab-btn" aria-selected="true" aria-controls="panel-plan-a" onclick="selectPlan('a')">
-            <span class="tab-top-row">
-              <span class="tab-code">Plan A</span>
-              <span class="tab-tag" lang="ja">ご希望店舗入り</span>
-              <span class="tab-tag" lang="en">Includes Granada</span>
-            </span>
-            <span class="tab-name" lang="ja">グラナダ軽井沢パエリア ＆ 雲場池・ツルヤ</span>
-            <span class="tab-name" lang="en">Granada Paella, Kumoba Pond &amp; Tsuruya</span>
+            <div class="tab-thumb-wrap">
+              <img class="tab-thumb-img" src="./images/paella.jpg" alt="Spanish seafood paella">
+            </div>
+            <div class="tab-body">
+              <span class="tab-top-row">
+                <span class="tab-code">Plan A</span>
+                <span class="tab-tag" lang="ja">ご希望店舗入り</span>
+                <span class="tab-tag" lang="en">Includes Granada</span>
+              </span>
+              <span class="tab-name" lang="ja">グラナダ軽井沢パエリア ＆ 雲場池・ツルヤ</span>
+              <span class="tab-name" lang="en">Granada Paella, Kumoba Pond &amp; Tsuruya</span>
+            </div>
           </button>
 
           <button type="button" role="tab" id="tab-plan-b" class="plan-tab-btn" aria-selected="false" aria-controls="panel-plan-b" onclick="selectPlan('b')">
-            <span class="tab-top-row">
-              <span class="tab-code">Plan B</span>
-              <span class="tab-tag" lang="ja">12/25限定装飾</span>
-              <span class="tab-tag" lang="en">Xmas Finale</span>
-            </span>
-            <span class="tab-name" lang="ja">旧軽井沢の教会 ＆ 星野エリア（ハルニレテラス）</span>
-            <span class="tab-name" lang="en">St. Paul's Church &amp; Hoshino Harunire Terrace</span>
+            <div class="tab-thumb-wrap">
+              <img class="tab-thumb-img" src="./images/harunire.jpg" alt="Harunire Terrace Christmas boardwalk">
+            </div>
+            <div class="tab-body">
+              <span class="tab-top-row">
+                <span class="tab-code">Plan B</span>
+                <span class="tab-tag" lang="ja">12/25限定装飾</span>
+                <span class="tab-tag" lang="en">Xmas Finale</span>
+              </span>
+              <span class="tab-name" lang="ja">旧軽井沢の教会 ＆ 星野エリア（ハルニレテラス）</span>
+              <span class="tab-name" lang="en">St. Paul's Church &amp; Harunire Terrace</span>
+            </div>
           </button>
 
           <button type="button" role="tab" id="tab-plan-c" class="plan-tab-btn" aria-selected="false" aria-controls="panel-plan-c" onclick="selectPlan('c')">
-            <span class="tab-top-row">
-              <span class="tab-code">Plan C</span>
-              <span class="tab-tag" lang="ja">絶景＆移動最短</span>
-              <span class="tab-tag" lang="en">Scenic &amp; Easy Drive</span>
-            </span>
-            <span class="tab-name" lang="ja">冬の白糸の滝 ＆ 西軽井沢・御代田 MMoP</span>
-            <span class="tab-name" lang="en">Shiraito Falls &amp; Miyota MMoP Art Complex</span>
+            <div class="tab-thumb-wrap">
+              <img class="tab-thumb-img" src="./images/shiraito.jpg" alt="Shiraito Falls in winter">
+            </div>
+            <div class="tab-body">
+              <span class="tab-top-row">
+                <span class="tab-code">Plan C</span>
+                <span class="tab-tag" lang="ja">冬絶景ドライブ</span>
+                <span class="tab-tag" lang="en">Scenic &amp; Easy Drive</span>
+              </span>
+              <span class="tab-name" lang="ja">冬の白糸の滝 ＆ 西軽井沢・御代田 MMoP</span>
+              <span class="tab-name" lang="en">Winter Shiraito Falls &amp; Miyota MMoP</span>
+            </div>
           </button>
         </div>
       </div>
@@ -911,18 +1215,35 @@
       <!-- ==================== PLAN A ==================== -->
       <article id="panel-plan-a" role="tabpanel" aria-labelledby="tab-plan-a" class="plan-panel is-active">
         <div class="plan-header">
-          <span class="plan-eyebrow" lang="ja">プランA · ご希望の「グラナダ軽井沢」を含むおすすめコース</span>
+          <span class="plan-eyebrow" lang="ja">プランA · ご希望の「グラナダ軽井沢」を含むイチオシコース</span>
           <span class="plan-eyebrow" lang="en">Plan A · Featured Course Including Granada Karuizawa</span>
 
           <h3 class="plan-title" lang="ja">「グラナダ軽井沢」で本格パエリア ＆ 冬の雲場池・ツルヤお買い物コース</h3>
           <h3 class="plan-title" lang="en">Authentic Paella at Granada Karuizawa, Winter Kumoba Pond &amp; Tsuruya Stop</h3>
 
           <p class="plan-summary" lang="ja">
-            駅近くの隠れ家スペイン料理店「グラナダ軽井沢」を主役にしたプランです。パエリアの炊き上がり時間（30〜40分）を計算し、午前に雲場池を散策してから11:30開店と同時にランチへ。食後は温泉宿への通り道にある人気ご当地スーパー「ツルヤ」に立ち寄ってから上山田温泉へ向かいます。
+            駅近くの隠れ家スペイン料理店「グラナダ軽井沢」を主役にしたプランです。パエリアの炊き上がり時間（30〜40分）を計算し、午前に静かな雲場池を散策してから11:30開店と同時にランチへ。食後は温泉宿への通り道にある大人気スーパー「ツルヤ」に立ち寄ってから上山田温泉へ向かいます。
           </p>
           <p class="plan-summary" lang="en">
-            Centered around Granada Karuizawa, a cozy Spanish restaurant near the station. Since fresh paella takes 30–40 minutes to cook, we enjoy a crisp morning walk around Kumoba Pond first, arrive right at opening (11:30) for lunch, and stop by the beloved local supermarket Tsuruya on the way west to Kamiyamada Onsen.
+            Centered around Granada Karuizawa near the station. Because fresh paella takes 30–40 minutes to cook from raw rice, we enjoy a peaceful morning walk around Kumoba Pond first, arrive right at 11:30 opening for lunch, and stop by the famous local supermarket Tsuruya on the way west to Kamiyamada Onsen.
           </p>
+
+          <div class="photo-showcase two-col">
+            <figure class="photo-figure">
+              <img src="./images/paella.jpg" alt="Spanish seafood paella, Jamon Serrano, and ajillo">
+              <figcaption class="photo-caption">
+                <span lang="ja">生米から炊き上げる本格パエリア＆生ハム・アヒージョ（イメージ）</span>
+                <span lang="en">Freshly cooked Spanish paella, Jamón Serrano &amp; ajillo</span>
+              </figcaption>
+            </figure>
+            <figure class="photo-figure">
+              <img src="./images/kumoba.jpg" alt="Winter mirror reflection at Kumoba Pond">
+              <figcaption class="photo-caption">
+                <span lang="ja">冬の静寂と水鏡が美しい「雲場池」（イメージ）</span>
+                <span lang="en">Mirror-still winter morning at Kumoba Pond</span>
+              </figcaption>
+            </figure>
+          </div>
 
           <div class="plan-metrics">
             <span class="metric-chip" lang="ja">軽井沢出発目安：13:50</span>
@@ -944,7 +1265,7 @@
               高速バス到着（北口バスのりば）に合わせてマイカー組と合流。北口すぐ横の「軽井沢駅北口駐車場（町営）」は入庫から30分無料なので、バスが多少前後しても落ち着いて待ち合わせできます。
             </p>
             <p class="spot-desc" lang="en">
-              The highway bus arrives at the North Exit rotary. The adjacent Karuizawa Station North Exit Municipal Parking Lot is free for the first 30 minutes, making pick-up stress-free even if traffic delays the bus slightly.
+              The highway bus arrives at the North Exit rotary. The adjacent Karuizawa Station North Exit Municipal Parking Lot is free for the first 30 minutes, making pick-up easy even if highway traffic shifts arrival slightly.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E8%BB%BD%E4%BA%95%E6%B2%A2%E9%A7%85%E5%8C%97%E5%8F%A3" target="_blank" rel="noopener noreferrer">
@@ -961,10 +1282,10 @@
             <h4 class="spot-title" lang="ja">冬の「雲場池」散策（または旧軽井沢・聖パウロカトリック教会）</h4>
             <h4 class="spot-title" lang="en">Morning Stroll at Kumoba Pond (or Old Karuizawa &amp; St. Paul's Church)</h4>
             <p class="spot-desc" lang="ja">
-              駅から車で約5分。冬の静寂に包まれた「雲場池（スワンレイク）」は人が少なく、澄んだ空気と水鏡がとても美しい穴場時間帯です（1周ゆっくり歩いて約25分）。寒さが強い日は、クリスマスらしい木造建築の「聖パウロカトリック教会」と旧軽井沢銀座の散策に切り替えるのもおすすめです。
+              駅から車で約5分。冬の静寂に包まれた「雲場池（スワンレイク）」は人が少なく、澄んだ空気と水鏡がとても美しい時間帯です（1周ゆっくり歩いて約25分）。寒さが強い日は、クリスマスらしい木造建築の「聖パウロカトリック教会」と旧軽井沢銀座の散策に切り替えるのもおすすめです。
             </p>
             <p class="spot-desc" lang="en">
-              A 5-minute drive from the station. Kumoba Pond ("Swan Lake") is wonderfully peaceful in late December, with mirror-like reflections and crisp alpine air (approx. 25 minutes to walk the loop). If the weather is chilly, you can easily swap this for nearby St. Paul's Catholic Church and Old Karuizawa Ginza Street.
+              A 5-minute drive from the station. Kumoba Pond ("Swan Lake") is wonderfully serene in late December, with mirror-like reflections and crisp mountain air (~25 min loop). On colder mornings, you can swap this for nearby St. Paul's Catholic Church and Old Karuizawa Ginza Street.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E9%9B%B2%E5%A0%B4%E6%B1%A0+%E8%BB%BD%E4%BA%95%E6%B2%A2" target="_blank" rel="noopener noreferrer">
@@ -981,25 +1302,25 @@
             <h4 class="spot-title" lang="ja">ランチ：「グラナダ軽井沢」で本格パエリア＆スペイン料理</h4>
             <h4 class="spot-title" lang="en">Lunch at Granada Karuizawa (Spanish Bar &amp; Restaurant)</h4>
             <p class="spot-desc" lang="ja">
-              軽井沢駅北口から徒歩2〜3分にある、スペインの街角バルのような隠れ家レストラン。生米から炊き上げる絶品パエリア（シーフード・鶏肉・イカ墨）や、スペイン王室ゆかりの熟成生ハム（ハモン・セラーノ）、熱々のアヒージョを大人4人でシェアして楽しめます。運転しない方はスペイン産ワインや長野県産ぶどうジュースもぜひ！
+              軽井沢駅北口から徒歩2〜3分にある、スペインの街角バルのような隠れ家レストラン。生米から炊き上げる絶品パエリア（シーフード・鶏肉・イカ墨）や、スペイン王室ゆかりの熟成生ハム（ハモン・セラーノ）、熱々のアヒージョを大人4人でシェアして楽しめます。長野県産の濃厚ぶどう・りんごジュースやスペインワインも充実！
             </p>
             <p class="spot-desc" lang="en">
-              Located just a 2–3 minute walk from Karuizawa Station North Exit, this charming Spanish restaurant serves authentic paella cooked from raw rice (seafood, chicken, or squid ink), aged Jamón Serrano, and sizzling ajillo—ideal for sharing among four adults. Nagano grape/apple juices and Spanish wines are also available.
+              Just 2–3 minutes on foot from Karuizawa Station North Exit, this cozy Spanish tavern serves authentic paella cooked from raw rice (seafood, chicken, or squid ink), aged Jamón Serrano, and garlic shrimp ajillo—ideal for sharing among four adults.
             </p>
 
             <div class="spot-callout">
               <p class="spot-callout-title" lang="ja">グラナダ軽井沢 ご利用時の重要メモ</p>
               <p class="spot-callout-title" lang="en">Important Notes for Granada Karuizawa</p>
               <ul class="spot-callout-list" lang="ja">
-                <li><strong>事前予約がおすすめ：</strong>パエリアは生米から炊くため<strong>30〜40分</strong>かかります（パエリアL.O. 13:00）。<strong>11:30開店同時の電話予約</strong>をしておくと、後の予定までゆったり過ごせます（予約時にパエリアの事前注文ができるかも相談するとさらに安心です）。</li>
+                <li><strong>事前予約がおすすめ：</strong>パエリアは生米から炊くため<strong>30〜40分</strong>かかります（パエリアL.O. 13:00）。<strong>11:30開店同時の電話予約</strong>をしておくと時間に余裕が持てます（予約時にパエリアの事前注文ができるかも相談するとさらにスムーズです）。</li>
                 <li><strong>営業時間：</strong>ランチ 11:30〜14:30（火曜定休のため12/25金曜は営業曜日）</li>
-                <li><strong>駐車場：</strong>店舗に<strong>無料駐車場2台</strong>あり（満車の場合はすぐ近くの駅北口周辺パーキングへ）。</li>
+                <li><strong>駐車場：</strong>店舗に<strong>無料駐車場2台</strong>あり（満車時はすぐ近くの駅北口周辺パーキングへ）。</li>
                 <li><strong>お支払い：</strong><strong>現金のみ（クレジットカード不可）</strong>の案内があるため、現金をご用意ください。</li>
               </ul>
               <ul class="spot-callout-list" lang="en">
-                <li><strong>Advance Reservation Recommended:</strong> Because paella is cooked from scratch, it takes <strong>30–40 minutes</strong> (paella last order at 13:00). Booking a table for <strong>11:30 opening</strong> keeps the schedule relaxed—ask when calling if you can pre-order the paella.</li>
+                <li><strong>Advance Reservation Recommended:</strong> Paella takes <strong>30–40 minutes</strong> from raw rice (paella last order 13:00). Book a table for <strong>11:30 opening</strong> and ask if you can pre-order the paella when calling.</li>
                 <li><strong>Hours:</strong> Lunch 11:30–14:30 (Closed Tuesdays; open Friday, Dec 25).</li>
-                <li><strong>Parking:</strong> <strong>2 free parking spaces</strong> onsite (station coin parking is right nearby if full).</li>
+                <li><strong>Parking:</strong> <strong>2 free parking spaces</strong> onsite (station coin parking right nearby if full).</li>
                 <li><strong>Payment:</strong> Listed as <strong>Cash Only (no credit cards)</strong>—please bring yen in cash.</li>
               </ul>
             </div>
@@ -1029,10 +1350,10 @@
             <h4 class="spot-title" lang="ja">西へ移動しがてら「ツルヤ軽井沢店」または「丸山珈琲 軽井沢本店」</h4>
             <h4 class="spot-title" lang="en">Stop at TSURUYA Karuizawa Supermarket or Maruyama Coffee Main Shop</h4>
             <p class="spot-desc" lang="ja">
-              上山田温泉方面（中軽井沢・西側）へ車を進めながら、12月は休まず営業している大人気スーパー「ツルヤ軽井沢店」へ（無料駐車場486台）。今夜ホテルで6人全員で楽しむ信州ワイン・地ビール・りんごバターなどのお土産調達にぴったりです（店内ミカド珈琲のモカソフトも人気！）。カフェ派なら近くの「丸山珈琲 軽井沢本店」での珈琲タイムも素敵です。
+              上山田温泉方面（中軽井沢・西側）へ車を進めながら、12月は無休営業の大人気ご当地スーパー「ツルヤ軽井沢店」へ（無料駐車場486台）。今夜ホテルで6人全員で乾杯する信州ワイン・地ビール・りんごバターなどのお土産調達に最適です（店内ミカド珈琲のモカソフトも名物！）。カフェ派なら近くの「丸山珈琲 軽井沢本店」もおすすめ。
             </p>
             <p class="spot-desc" lang="en">
-              Heading west toward Naka-Karuizawa (on the way to the expressway), stop by TSURUYA Karuizawa—a famous local gourmet supermarket open daily in December with 486 free parking spaces. Great for picking up Shinshu wines, craft beers, and local jams to enjoy with all 6 family members at the onsen hotel tonight (plus Mikado Coffee's mocha soft-serve inside!). Alternatively, enjoy specialty coffee at nearby Maruyama Coffee Karuizawa Main Shop.
+              Heading west toward the expressway, stop by TSURUYA Karuizawa—a beloved local gourmet supermarket open daily in December (486 free parking spaces). Pick up Shinshu wines, craft beers, and apple butter to enjoy with all 6 family members at the hotel tonight, or visit nearby Maruyama Coffee Main Shop.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%83%84%E3%83%AB%E3%83%A4%E8%BB%BD%E4%BA%95%E6%B2%A2%E5%BA%97" target="_blank" rel="noopener noreferrer">
@@ -1054,18 +1375,11 @@
             <h4 class="spot-title" lang="ja">中軽井沢を出発 → 上山田温泉のホテルへチェックイン（6名合流）</h4>
             <h4 class="spot-title" lang="en">Depart Naka-Karuizawa → Check in at Kamiyamada Onsen Hotel (All 6 Meet)</h4>
             <p class="spot-desc" lang="ja">
-              国道18号・浅間サンライン経由で上信越自動車道「小諸IC」から乗り、「坂城IC」で降りて戸倉上山田温泉へ（約60〜65分）。15:00頃にホテル到着、ご家族2名とも合流して温泉でゆっくり温まりましょう！
+              浅間サンライン経由で上信越自動車道「小諸IC」→「坂城IC」へ（約60〜65分）。15:00頃に上山田温泉のホテルへ到着し、ご家族2名とも合流！
             </p>
             <p class="spot-desc" lang="en">
-              Take Route 18 / Asama Sunline west to Komoro IC on the Joshin-etsu Expressway, exit at Sakaki IC, and arrive at Togura Kamiyamada Onsen in about 60–65 minutes for a smooth 15:00 check-in with the whole family.
+              Take Asama Sunline west to Komoro IC on the Joshin-etsu Expressway, exit at Sakaki IC, and arrive at Kamiyamada Onsen in ~60–65 minutes for your 15:00 family reunion.
             </p>
-            <div class="spot-actions">
-              <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E6%88%B8%E5%80%89%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span lang="ja">戸倉上山田温泉（Googleマップ）</span>
-                <span lang="en">Kamiyamada Onsen Area (Map)</span>
-              </a>
-            </div>
           </li>
         </ol>
       </article>
@@ -1074,7 +1388,7 @@
       <article id="panel-plan-b" role="tabpanel" aria-labelledby="tab-plan-b" class="plan-panel">
         <div class="plan-header">
           <span class="plan-eyebrow" lang="ja">プランB · クリスマス当日の華やかな雰囲気を楽しむコース</span>
-          <span class="plan-eyebrow" lang="en">Plan B · Festive Christmas Atmosphere &amp; Forest Walk</span>
+          <span class="plan-eyebrow" lang="en">Plan B · Festive Christmas Atmosphere &amp; Forest Boardwalk</span>
 
           <h3 class="plan-title" lang="ja">旧軽井沢の教会 ＆ 星野エリア「ハルニレテラス・高原教会」コース</h3>
           <h3 class="plan-title" lang="en">St. Paul's Catholic Church &amp; Hoshino Area (Harunire Terrace) Course</h3>
@@ -1083,8 +1397,18 @@
             ちょうど12月25日当日までクリスマス装飾イベントが開催されている「軽井沢星野エリア」を満喫するプランです。軽井沢駅→旧軽井沢→中軽井沢（星野エリア）と西へ進みながら観光するため、14:00出発でも余裕をもって15:00に上山田温泉へ着けます。旅館の夕食に備えてお蕎麦ランチを選べるのも魅力です。
           </p>
           <p class="plan-summary" lang="en">
-            Celebrate Christmas Day at the Karuizawa Hoshino Area, whose seasonal "Christmas in Hoshino" decorations run right through December 25. Moving steadily west from Old Karuizawa to Naka-Karuizawa shortens the afternoon drive to Kamiyamada Onsen, and offers lighter Shinshu soba or bakery lunch options before tonight's big ryokan dinner.
+            Celebrate Christmas Day at the Karuizawa Hoshino Area, whose seasonal "Christmas in Hoshino" decorations run right through December 25. Moving steadily west from Old Karuizawa to Naka-Karuizawa shortens the afternoon drive to Kamiyamada Onsen, and offers lighter Shinshu soba or bakery lunch options before tonight's ryokan feast.
           </p>
+
+          <div class="photo-showcase">
+            <figure class="photo-figure">
+              <img src="./images/harunire.jpg" alt="Harunire Terrace wooden boardwalk with Christmas wreaths">
+              <figcaption class="photo-caption">
+                <span lang="ja">清流沿いのウッドデッキにクリスマス装飾が彩る「ハルニレテラス」（イメージ）</span>
+                <span lang="en">Festive winter boardwalk along the stream at Harunire Terrace</span>
+              </figcaption>
+            </figure>
+          </div>
 
           <div class="plan-metrics">
             <span class="metric-chip" lang="ja">軽井沢出発目安：14:00</span>
@@ -1106,7 +1430,7 @@
               高速バス到着後、駅北口駐車場（30分無料）でマイカーに乗り込み、まずは北へ車で約7分の旧軽井沢エリアへ向かいます。
             </p>
             <p class="spot-desc" lang="en">
-              Meet at the North Exit lot (first 30 min free) and take a 7-minute drive north to the historic Old Karuizawa district.
+              Meet at the North Exit lot (first 30 min free) and take a 7-minute drive north to historic Old Karuizawa.
             </p>
           </li>
 
@@ -1119,7 +1443,7 @@
               建築家アントニン・レーモンド設計の三角屋根が美しい「聖パウロカトリック教会」は、12/25のクリスマスに訪れるのにぴったりの名建築。周辺の旧軽井沢銀座通りで老舗ベーカリーやジャム店をのぞきながら朝の散歩を楽しみます。
             </p>
             <p class="spot-desc" lang="en">
-              Designed by Antonin Raymond, this iconic wood-and-shingle church is especially atmospheric on Christmas Day. Enjoy a relaxed stroll along nearby Old Karuizawa Ginza Street with its classic bakeries and craft shops.
+              Designed by Antonin Raymond, this iconic wood-and-shingle church is especially atmospheric on Christmas Day. Enjoy a relaxed stroll along nearby Old Karuizawa Ginza Street.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E8%BB%BD%E4%BA%95%E6%B2%A2%E8%81%96%E3%83%91%E3%82%A6%E3%83%AD%E3%82%AB%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E6%95%99%E4%BC%9A" target="_blank" rel="noopener noreferrer">
@@ -1139,7 +1463,7 @@
               旧軽井沢から西へ車で約15分、湯川の清流に寄り添うウッドデッキの街「ハルニレテラス」へ。温泉宿での豪華な夕食を見据えて程よい量にするなら名店<strong>「せきれい橋 川上庵」</strong>の信州そば＆天ぷら、洋食・パン気分なら<strong>「ベーカリー＆レストラン 沢村」</strong>やイタリアン<strong>「イル・ソーニョ」</strong>と、当日の気分で選べます。
             </p>
             <p class="spot-desc" lang="en">
-              Drive 15 minutes west to Harunire Terrace, a riverside boardwalk of 16 shops and restaurants nestled among elm trees. Choose <strong>Sekireibashi Kawakamian</strong> for crisp Shinshu soba and tempura (great if you want to save room for your ryokan dinner!), or <strong>Bakery &amp; Restaurant Sawamura</strong> for artisan bread and hearty bistro plates.
+              Drive 15 minutes west to Harunire Terrace. Choose <strong>Sekireibashi Kawakamian</strong> for crisp Shinshu soba and tempura (great for saving room for tonight's ryokan feast!), or <strong>Bakery &amp; Restaurant Sawamura</strong> for artisan bread and hearty bistro plates.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%83%8F%E3%83%AB%E3%83%8B%E3%83%AC%E3%83%86%E3%83%A9%E3%82%B9" target="_blank" rel="noopener noreferrer">
@@ -1156,10 +1480,10 @@
             <h4 class="spot-title" lang="ja">もみの木広場・軽井沢高原教会のクリスマス装飾 ＆ 丸山珈琲</h4>
             <h4 class="spot-title" lang="en">Christmas Trees at Karuizawa Kogen Church &amp; Maruyama Coffee</h4>
             <p class="spot-desc" lang="ja">
-              星野エリアでは12/25までクリスマスイベント「やどりぎの光に包まれて」を開催中。シンボルツリーのある広場や軽井沢高原教会周辺を散策し、ハルニレテラス内の「丸山珈琲」や「HARVEST NAGANO」でお土産やドライブ用の温かいコーヒーを買って出発します。
+              星野エリアでは12/25までクリスマスイベント「やどりぎの光に包まれて」を開催中。シンボルツリーのある広場や軽井沢高原教会周辺を散策し、ハルニレテラス内の「丸山珈琲」でドライブ用の温かいコーヒーを買って出発します。
             </p>
             <p class="spot-desc" lang="en">
-              Enjoy the final day of Hoshino Area's Christmas decorations around the fir-tree plaza and Karuizawa Kogen Church, then pick up specialty coffee for the road at Maruyama Coffee inside Harunire Terrace.
+              Enjoy the final day of Hoshino Area's Christmas decorations around Karuizawa Kogen Church, then grab warm specialty coffee for the road at Maruyama Coffee.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E8%BB%BD%E4%BA%95%E6%B2%A2%E9%AB%98%E5%8E%9F%E6%95%99%E4%BC%9A" target="_blank" rel="noopener noreferrer">
@@ -1179,7 +1503,7 @@
               中軽井沢エリアから浅間サンライン経由で「小諸IC」へ出られるため、軽井沢駅発より約10〜15分短縮でき、約55〜60分で上山田温泉に到着します。
             </p>
             <p class="spot-desc" lang="en">
-              Starting from Naka-Karuizawa saves 10–15 minutes heading west; take Asama Sunline to Komoro IC and exit at Sakaki IC, reaching Kamiyamada Onsen in about 55–60 minutes.
+              Starting from Naka-Karuizawa saves 10–15 minutes heading west; take Asama Sunline to Komoro IC and exit at Sakaki IC (~55–60 min total).
             </p>
           </li>
         </ol>
@@ -1198,8 +1522,18 @@
             スタッドレス装着のマイカーだからこそ行ける冬の「白糸の滝」で神秘的な湧水と氷の景色を楽しんだ後、浅間山を一望する西隣の御代田町「MMoP（モップ）」へ抜ける大人のドライブプランです。最終地点が小諸ICにとても近いため、上山田温泉まで約45〜50分と移動が一番ラクなコースです。
           </p>
           <p class="plan-summary" lang="en">
-            Take advantage of your winter-ready car to visit the magical spring-fed Shiraito Falls in the crisp mountain air, then cruise west along the foot of Mt. Asama to MMoP in Miyota—a stylish photo-museum, dining, and design complex. Because Miyota sits right near Komoro IC, the final drive to Kamiyamada Onsen is the shortest at just 45–50 minutes.
+            Take advantage of your snow-tire-equipped car to visit magical spring-fed Shiraito Falls, then cruise west along the foot of Mt. Asama to MMoP in Miyota—a stylish photo-museum, dining, and Nordic design complex just 15 minutes from Komoro IC.
           </p>
+
+          <div class="photo-showcase">
+            <figure class="photo-figure">
+              <img src="./images/shiraito.jpg" alt="Shiraito Falls in winter with emerald pool and snow">
+              <figcaption class="photo-caption">
+                <span lang="ja">湾曲した岩肌から地下水が絹糸のように流れ落ちる冬の「白糸の滝」（イメージ）</span>
+                <span lang="en">Crystal spring water cascading like white silk at winter Shiraito Falls</span>
+              </figcaption>
+            </figure>
+          </div>
 
           <div class="plan-metrics">
             <span class="metric-chip" lang="ja">御代田出発目安：14:05</span>
@@ -1231,10 +1565,10 @@
             <h4 class="spot-title" lang="ja">冬の「白糸の滝」を鑑賞</h4>
             <h4 class="spot-title" lang="en">Winter Scenery at Shiraito Falls</h4>
             <p class="spot-desc" lang="ja">
-              無料駐車場から滝までは平坦な遊歩道を歩いてわずか2〜3分。高さ3m・幅70mの湾曲した岩肌から地下水が絹糸のように湧き出し、冬は湯気と氷柱が織りなす幻想的な景色に出会えます（※足元が冷えるため暖かい靴がおすすめ）。
+              無料駐車場から滝までは平坦な遊歩道を歩いてわずか2〜3分。高さ3m・幅70mの岩肌から地下水が絹糸のように湧き出し、冬は湯気と氷柱が織りなす幻想的な景色に出会えます。
             </p>
             <p class="spot-desc" lang="en">
-              Just a gentle 2–3 minute walk from the parking area. Crystal-clear spring water cascades across a curved 70-meter rock wall like threads of white silk, framed by winter icicles and mist.
+              Just a gentle 2–3 minute walk from the parking area. Crystal-clear spring water cascades across a 70-meter curved rock wall, framed by winter icicles and mist.
             </p>
             <div class="spot-actions">
               <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E7%B3%B8%E3%81%AE%E6%BB%9D+%E8%BB%BD%E4%BA%95%E6%B2%A2" target="_blank" rel="noopener noreferrer">
@@ -1254,17 +1588,17 @@
               山を下りて浅間山を眺めながら西軽井沢・御代田の複合施設「MMoP」へ（火曜定休・12/25金曜は営業）。炊きたての羽釜ごはんと季節の献立が味わえる<strong>「tsubu.（ツブ）」</strong>や、薪火のぬくもりを感じるフレンチベースの<strong>「NID」</strong>などでゆったりランチを楽しめます。
             </p>
             <p class="spot-desc" lang="en">
-              Cruise down toward the sunny southern foothills of Mt. Asama to MMoP in Miyota (closed Tuesdays; open Friday, Dec 25). Enjoy freshly cooked hagama-pot rice and seasonal dishes at <strong>tsubu.</strong>, or wood-fired French-inspired plates at <strong>NID</strong>.
+              Cruise down toward the sunny foothills of Mt. Asama to MMoP in Miyota (closed Tuesdays; open Friday, Dec 25). Enjoy freshly cooked hagama-pot rice at <strong>tsubu.</strong> or wood-fired French-inspired plates at <strong>NID</strong>.
             </p>
 
             <div class="spot-callout">
               <p class="spot-callout-title" lang="ja">組み合わせアレンジも可能です！</p>
               <p class="spot-callout-title" lang="en">Easy Mix-and-Match Option</p>
               <ul class="spot-callout-list" lang="ja">
-                <li>「白糸の滝」を見たあと軽井沢駅方面へ戻り、<strong>11:45頃からプランAの「グラナダ軽井沢」でランチ</strong>にする組み合わせも時間内にすっきり収まります！</li>
+                <li>「白糸の滝」を見たあと軽井沢駅方面へ戻り、<strong>11:45頃からプランAの「グラナダ軽井沢」でパエリアランチ</strong>にする組み合わせも時間内にすっきり収まります！</li>
               </ul>
               <ul class="spot-callout-list" lang="en">
-                <li>Love both Shiraito Falls and Spanish paella? You can visit Shiraito Falls first (10:40–11:10) and drive back to <strong>Granada Karuizawa by 11:40</strong> for lunch!</li>
+                <li>Want both Shiraito Falls and Spanish paella? Visit Shiraito Falls first (10:40–11:10) and drive back to <strong>Granada Karuizawa by 11:40</strong> for lunch!</li>
               </ul>
             </div>
 
@@ -1288,10 +1622,10 @@
             <h4 class="spot-title" lang="ja">MMoP内のインテリア雑貨・写真美術館・カフェ散策</h4>
             <h4 class="spot-title" lang="en">Explore MMoP Galleries, Nordic Design Shops &amp; Cafe</h4>
             <p class="spot-desc" lang="ja">
-              緑豊かな敷地内に点在する北欧ヴィンテージ雑貨や器のショップ、御代田写真美術館、コーヒースタンドをのんびり散策。晴れた冬の日は雪化粧した浅間山の雄大な姿が目の前に広がります。
+              敷地内に点在する北欧ヴィンテージ雑貨や器のショップ、御代田写真美術館、コーヒースタンドをのんびり散策。晴れた冬の日は雪化粧した浅間山の雄大な姿が目の前に広がります。
             </p>
             <p class="spot-desc" lang="en">
-              Browse curated Nordic vintage interiors, ceramics, art galleries, and specialty coffee stands across the open grounds, with sweeping winter views of snow-dusted Mt. Asama on clear days.
+              Browse curated Nordic vintage interiors, ceramics, art galleries, and specialty coffee stands with sweeping winter views of snow-dusted Mt. Asama.
             </p>
           </li>
 
@@ -1304,17 +1638,48 @@
               MMoPから上信越道「小諸IC」までは車で約15分。坂城IC経由でトータル約45〜50分で上山田温泉に到着します。
             </p>
             <p class="spot-desc" lang="en">
-              Komoro IC is only 15 minutes from MMoP, making it an easy 45–50 minute total drive via Sakaki IC to your hotel in Kamiyamada Onsen.
+              Komoro IC is just 15 minutes from MMoP, making it an easy 45–50 minute total drive via Sakaki IC to Kamiyamada Onsen.
             </p>
           </li>
         </ol>
       </article>
     </section>
 
+    <!-- 15:00 Onsen Finale Visual Card -->
+    <section aria-labelledby="onsen-heading">
+      <div class="onsen-finale-card">
+        <div class="onsen-img-wrap">
+          <img src="./images/onsen.jpg" alt="Japanese outdoor hot spring bath in winter Nagano">
+        </div>
+        <div class="onsen-content">
+          <span class="onsen-kicker">15:00 Check-in · Family Reunion</span>
+          <h2 id="onsen-heading" class="onsen-title">
+            <span lang="ja">15:00頃 戸倉上山田温泉のホテルへ！ご家族6名全員合流</span>
+            <span lang="en">~15:00 Arrive at Kamiyamada Onsen · All 6 Reunite!</span>
+          </h2>
+          <p class="onsen-desc" lang="ja">
+            軽井沢での冬散歩を楽しんだあとは、美肌の湯として名高い「戸倉上山田温泉」へ。ホテルでご家族2名とも合流し、6名全員そろって温泉とクリスマスの夜をゆっくりお楽しみください。
+          </p>
+          <p class="onsen-desc" lang="en">
+            After exploring winter Karuizawa, unwind in therenowned mineral waters of Togura Kamiyamada Onsen—where the rest of the family joins for a cozy Christmas evening together.
+          </p>
+          <div class="spot-actions">
+            <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E6%88%B8%E5%80%89%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span lang="ja">戸倉上山田温泉エリア（Googleマップ）</span>
+              <span lang="en">Kamiyamada Onsen Area (Map)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Quick 3-Plan Comparison Table -->
     <section aria-labelledby="compare-heading">
-      <h2 id="compare-heading" class="section-heading" lang="ja">3プランひと目で比較表</h2>
-      <h2 id="compare-heading-en" class="section-heading" lang="en">At-a-Glance Comparison</h2>
+      <h2 id="compare-heading" class="section-heading">
+        <span lang="ja">3プランひと目で比較表</span>
+        <span lang="en">At-a-Glance Comparison</span>
+      </h2>
 
       <div class="comparison-card">
         <table class="comp-table">
@@ -1399,10 +1764,12 @@
       </div>
     </section>
 
-    <!-- Practical Tips for Dec 25 -->
+    <!-- Practical Tips -->
     <section aria-labelledby="tips-heading">
-      <h2 id="tips-heading" class="section-heading" lang="ja">当日の安心メモ（服装・アクセス）</h2>
-      <h2 id="tips-heading-en" class="section-heading" lang="en">Helpful Day-Of Tips</h2>
+      <h2 id="tips-heading" class="section-heading">
+        <span lang="ja">当日の安心メモ（服装・アクセス）</span>
+        <span lang="en">Helpful Day-Of Tips</span>
+      </h2>
 
       <div class="tips-grid">
         <div class="tip-card">
@@ -1412,7 +1779,7 @@
             12月25日頃の軽井沢は日中でも0〜5℃前後と真冬の寒さです。車移動が中心でも、雲場池や白糸の滝などを歩く際に備えて手袋・マフラー・滑りにくい暖かい靴があると快適です。
           </p>
           <p lang="en">
-            Daytime temperatures in Karuizawa around Dec 25 hover around 0–5°C (32–41°F). Even with a car, bring gloves, a warm scarf, and non-slip winter footwear for walking around ponds, churches, or waterfalls.
+            Daytime temperatures in Karuizawa around Dec 25 hover around 0–5°C (32–41°F). Bring gloves, a warm scarf, and non-slip winter footwear for walking around ponds, churches, or waterfalls.
           </p>
         </div>
 
@@ -1423,13 +1790,13 @@
             軽井沢から西へ向かい、<strong>浅間サンライン → 上信越自動車道「小諸IC」→「坂城IC」→ 戸倉上山田温泉</strong>のルートが信号も少なくスムーズです。温泉宿での夕食も楽しみなので、ランチは11:30頃の早めスタートがベストバランスです！
           </p>
           <p lang="en">
-            Heading west via <strong>Asama Sunline → Joshin-etsu Expressway (Komoro IC to Sakaki IC) → Togura Kamiyamada Onsen</strong> is the smoothest route. Starting lunch early around 11:30 leaves plenty of appetite for tonight's onsen ryokan feast!
+            Heading west via <strong>Asama Sunline → Joshin-etsu Expressway (Komoro IC to Sakaki IC) → Togura Kamiyamada Onsen</strong> is the smoothest route. Starting lunch early around 11:30 leaves plenty of appetite for tonight's ryokan dinner!
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Footer with Copy Link for LINE -->
+    <!-- Footer -->
     <footer class="page-footer">
       <div class="share-bar">
         <button type="button" id="btn-copy-url" class="copy-btn" onclick="copyPageUrl()">
@@ -1440,6 +1807,8 @@
       </div>
       <p lang="ja">12/25 軽井沢〜上山田温泉 ご家族旅行しおり · 素敵なクリスマスになりますように！</p>
       <p lang="en">Dec 25 Karuizawa &amp; Kamiyamada Onsen Family Trip Guide · Wishing Everyone a Wonderful Christmas!</p>
+      <p class="photo-disclaimer" lang="ja">※掲載写真は季節や料理の雰囲気をお伝えするためのイメージです。</p>
+      <p class="photo-disclaimer" lang="en">*Photos shown are illustrative images conveying the seasonal and culinary atmosphere.</p>
     </footer>
   </main>
 
@@ -1467,9 +1836,7 @@
           url.searchParams.set('lang', validLang);
           window.history.replaceState({}, '', url.toString());
         }
-      } catch (e) {
-        // Ignore storage or history errors in restricted webviews
-      }
+      } catch (e) {}
     }
 
     function selectPlan(planKey) {
@@ -1507,6 +1874,16 @@
         }, 2500);
       }
 
+      if (urlToCopy.indexOf('http') !== 0) {
+        if (labelJa) labelJa.textContent = 'Web公開後にURLをコピーできるようになります';
+        if (labelEn) labelEn.textContent = 'Copies live URL once published to the web';
+        setTimeout(function () {
+          if (labelJa) labelJa.textContent = 'LINE共有用にこのページのURLをコピー';
+          if (labelEn) labelEn.textContent = 'Copy Page URL to Share on LINE';
+        }, 2500);
+        return;
+      }
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(urlToCopy).then(showCopiedFeedback).catch(function () {
           fallbackCopy(urlToCopy, showCopiedFeedback, currentLang);
@@ -1542,9 +1919,7 @@
         } else if (savedLang === 'en' || savedLang === 'ja') {
           setLanguage(savedLang);
         }
-      } catch (e) {
-        // Default to Japanese
-      }
+      } catch (e) {}
     })();
   </script>
 </body>
