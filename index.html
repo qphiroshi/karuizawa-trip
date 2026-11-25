@@ -766,68 +766,59 @@
 
     /* Onsen Finale Card */
     .onsen-finale-card {
-      display: grid;
-      grid-template-columns: 1fr;
       background-color: var(--bg-surface);
       border: 1px solid var(--line-subtle);
       border-radius: 16px;
-      overflow: hidden;
+      padding: 22px 18px;
       box-shadow: var(--shadow-elevated);
       margin-bottom: 30px;
     }
 
     @media (min-width: 640px) {
       .onsen-finale-card {
-        grid-template-columns: 0.95fr 1.05fr;
-      }
-    }
-
-    .onsen-img-wrap {
-      min-height: 210px;
-      background-color: var(--bg-pine);
-    }
-
-    .onsen-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .onsen-content {
-      padding: 20px 20px 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    @media (min-width: 640px) {
-      .onsen-content {
-        padding: 24px 28px;
+        padding: 28px 30px;
       }
     }
 
     .onsen-kicker {
+      display: inline-block;
       font-size: 12px;
       font-weight: 700;
       color: var(--accent-berry);
       letter-spacing: 0.05em;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .onsen-title {
       margin: 0 0 8px;
       font-family: var(--font-serif);
-      font-size: 20px;
+      font-size: clamp(20px, 3.6vw, 24px);
       line-height: 1.35;
       color: var(--ink-primary);
     }
 
     .onsen-desc {
-      margin: 0 0 12px;
-      font-size: 14px;
+      margin: 0 0 14px;
+      font-size: 14.5px;
       color: var(--ink-secondary);
-      line-height: 1.68;
+      line-height: 1.7;
+    }
+
+    .onsen-meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .onsen-address {
+      margin: 0 0 14px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+      background-color: var(--bg-paper);
+      border: 1px solid var(--line-subtle);
+      border-radius: 8px;
+      padding: 9px 12px;
     }
 
     /* Comparison Table */
@@ -1001,10 +992,10 @@
             <span lang="en">Dec 25 Winter Karuizawa Stroll &amp; Lunch Plans</span>
           </h1>
           <p class="hero-lead" lang="ja">
-            10:12頃に軽井沢駅北口で合流し、14:00頃まで大人4人で冬の軽井沢を楽しむ3つのモデルコース。散策後はマイカーで西へ向かい、15:00頃に上山田温泉のホテルへチェックイン（ご家族2名も合流・計6名）します。
+            10:12頃に軽井沢駅北口で合流し、14:00頃まで大人4人で冬の軽井沢を楽しむ3つのモデルコース。散策後はマイカーで西へ向かい、15:00頃に上山田温泉「クラブウィンダム 千曲館 長野」へチェックイン（ご家族2名も合流・計6名）します。
           </p>
           <p class="hero-lead" lang="en">
-            Three winter itinerary options for four adults exploring Karuizawa by car from 10:12 to ~14:00, followed by a scenic westbound drive to Kamiyamada Onsen for a 15:00 hotel check-in with the whole family (total of 6).
+            Three winter itinerary options for four adults exploring Karuizawa by car from 10:12 to ~14:00, followed by a westbound drive to Club Wyndham Chikumakan Nagano (Kamiyamada Onsen) for a 15:00 check-in with the whole family (total of 6).
           </p>
         </div>
       </div>
@@ -1039,11 +1030,11 @@
 
         <div class="overview-item">
           <span class="overview-label" lang="ja">宿泊先（15:00頃着）</span>
-          <span class="overview-label" lang="en">Check-in (~15:00)</span>
-          <span class="overview-value" lang="ja">上山田温泉 ホテル</span>
-          <span class="overview-value" lang="en">Kamiyamada Onsen</span>
-          <span class="overview-sub" lang="ja">ご家族2名も合流（計6名）</span>
-          <span class="overview-sub" lang="en">2 more family members join (6)</span>
+          <span class="overview-label" lang="en">Hotel (~15:00)</span>
+          <span class="overview-value" lang="ja">クラブウィンダム 千曲館</span>
+          <span class="overview-value" lang="en">Club Wyndham Chikumakan</span>
+          <span class="overview-sub" lang="ja">上山田温泉・ご家族6名合流</span>
+          <span class="overview-sub" lang="en">Kamiyamada Onsen · All 6 meet</span>
         </div>
       </div>
 
@@ -1052,20 +1043,18 @@
         <div class="map-card-header">
           <h2 class="map-card-title">
             <span lang="ja">位置関係＆ドライブルート図（東→西へスムーズ移動）</span>
-            <span lang="en">Area &amp; Westbound Drive Map (Karuizawa → Kamiyamada Onsen)</span>
+            <span lang="en">Area &amp; Westbound Drive Map (Karuizawa → Chikumakan)</span>
           </h2>
-          <span class="map-card-note" lang="ja">※上山田温泉は軽井沢の西側（約50〜65分）</span>
-          <span class="map-card-note" lang="en">*Kamiyamada Onsen lies 50–65 min west of Karuizawa</span>
+          <span class="map-card-note" lang="ja">※千曲館（上山田温泉）は軽井沢の西側（約50〜65分）</span>
+          <span class="map-card-note" lang="en">*Club Wyndham Chikumakan lies 50–65 min west of Karuizawa</span>
         </div>
 
         <div class="route-svg-wrap">
-          <svg class="route-svg" viewBox="0 0 780 215" role="img" aria-label="Route map from Karuizawa Station to Kamiyamada Onsen">
+          <svg class="route-svg" viewBox="0 0 780 215" role="img" aria-label="Route map from Karuizawa Station to Club Wyndham Chikumakan Nagano">
             <!-- Soft Mt. Asama silhouette in background -->
             <path d="M410 82 L475 24 L505 24 L575 82 Z" fill="#E3DDD2" opacity="0.7"/>
             <path d="M475 24 L505 24 L525 42 L495 38 L482 44 L462 39 Z" fill="#FFFFFF"/>
 
-            <!-- Main Westbound Highway / Road Line (East at right -> West at left, or intuitive Left-to-Right chronological flow!) -->
-            <!-- Chronological Left (10:12 Start) -> Right (15:00 Goal) -->
             <!-- Mountain loop branch to Shiraito Falls -->
             <path d="M110 128 Q175 42 260 52 Q335 60 390 128" fill="none" stroke="#8FA89B" stroke-width="2.5" stroke-dasharray="5 4"/>
             <!-- Main Karuizawa -> Naka-Karuizawa -> Miyota -> Expressway -> Kamiyamada line -->
@@ -1080,17 +1069,11 @@
             <polygon points="612,132 600,126 600,138" fill="#A9442D"/>
 
             <!-- Nodes -->
-            <!-- 1. Karuizawa Station & Granada -->
             <circle cx="95" cy="132" r="10" fill="#1F3D31" stroke="#FFFFFF" stroke-width="3"/>
-            <!-- 2. Kumoba / Old Karuizawa -->
             <circle cx="255" cy="132" r="8" fill="#FFFFFF" stroke="#1F3D31" stroke-width="3"/>
-            <!-- 2b. Shiraito Falls (top) -->
             <circle cx="255" cy="52" r="7.5" fill="#FFFFFF" stroke="#5B7F6E" stroke-width="3"/>
-            <!-- 3. Naka-Karuizawa (Hoshino / Tsuruya) -->
             <circle cx="395" cy="132" r="8" fill="#FFFFFF" stroke="#1F3D31" stroke-width="3"/>
-            <!-- 4. Miyota MMoP / Komoro IC -->
             <circle cx="525" cy="132" r="8" fill="#FFFFFF" stroke="#A9442D" stroke-width="3"/>
-            <!-- 5. Kamiyamada Onsen Goal -->
             <circle cx="685" cy="132" r="11" fill="#A9442D" stroke="#FFFFFF" stroke-width="3"/>
 
             <!-- JAPANESE LABELS -->
@@ -1115,10 +1098,10 @@
 
               <text x="605" y="122" text-anchor="middle" font-size="10.5" fill="#A9442D" font-weight="700">高速 約25分</text>
 
-              <rect x="615" y="88" width="140" height="26" rx="6" fill="#A9442D"/>
-              <text x="685" y="105" text-anchor="middle" font-size="11.5" fill="#FFFFFF" font-weight="700">15:00 上山田温泉</text>
-              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">ホテルで6名全員合流！</text>
-              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">チェックイン＆温泉</text>
+              <rect x="602" y="88" width="166" height="26" rx="6" fill="#A9442D"/>
+              <text x="685" y="105" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="700">15:00 クラブウィンダム千曲館</text>
+              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">上山田温泉・6名全員合流！</text>
+              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">坂城ICより車約15分</text>
             </g>
 
             <!-- ENGLISH LABELS -->
@@ -1143,10 +1126,10 @@
 
               <text x="605" y="122" text-anchor="middle" font-size="10.5" fill="#A9442D" font-weight="700">Hwy ~25m</text>
 
-              <rect x="610" y="88" width="150" height="26" rx="6" fill="#A9442D"/>
-              <text x="685" y="105" text-anchor="middle" font-size="11.5" fill="#FFFFFF" font-weight="700">15:00 Kamiyamada Onsen</text>
-              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">All 6 Family Members Meet!</text>
-              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">Hotel Check-in &amp; Baths</text>
+              <rect x="600" y="88" width="170" height="26" rx="6" fill="#A9442D"/>
+              <text x="685" y="105" text-anchor="middle" font-size="10.5" fill="#FFFFFF" font-weight="700">15:00 Club Wyndham Chikumakan</text>
+              <text x="685" y="160" text-anchor="middle" font-size="11.5" fill="#A9442D" font-weight="700">Kamiyamada · All 6 Meet!</text>
+              <text x="685" y="176" text-anchor="middle" font-size="10.5" fill="#52605A">~15m from Sakaki IC</text>
             </g>
           </svg>
         </div>
@@ -1372,14 +1355,21 @@
           <li class="timeline-item">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="time-badge">13:50 – 15:00</span>
-            <h4 class="spot-title" lang="ja">中軽井沢を出発 → 上山田温泉のホテルへチェックイン（6名合流）</h4>
-            <h4 class="spot-title" lang="en">Depart Naka-Karuizawa → Check in at Kamiyamada Onsen Hotel (All 6 Meet)</h4>
+            <h4 class="spot-title" lang="ja">中軽井沢を出発 → 「クラブウィンダム 千曲館 長野」へチェックイン（6名合流）</h4>
+            <h4 class="spot-title" lang="en">Depart Naka-Karuizawa → Check in at Club Wyndham Chikumakan Nagano</h4>
             <p class="spot-desc" lang="ja">
-              浅間サンライン経由で上信越自動車道「小諸IC」→「坂城IC」へ（約60〜65分）。15:00頃に上山田温泉のホテルへ到着し、ご家族2名とも合流！
+              浅間サンライン経由で上信越自動車道「小諸IC」→「坂城IC」へ（約60〜65分）。15:00頃に戸倉上山田温泉「クラブウィンダム 千曲館 長野」へ到着し、ご家族2名とも合流！
             </p>
             <p class="spot-desc" lang="en">
-              Take Asama Sunline west to Komoro IC on the Joshin-etsu Expressway, exit at Sakaki IC, and arrive at Kamiyamada Onsen in ~60–65 minutes for your 15:00 family reunion.
+              Take Asama Sunline west to Komoro IC on the Joshin-etsu Expressway, exit at Sakaki IC, and arrive at Club Wyndham Chikumakan Nagano in ~60–65 minutes for your 15:00 family reunion.
             </p>
+            <div class="spot-actions">
+              <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AF%E3%83%A9%E3%83%96%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%80%E3%83%A0%E5%8D%83%E6%9B%B2%E9%A4%A8+%E9%95%B7%E9%87%8E+%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8D%83%E6%9B%B2%E5%B8%82%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%891-33-4" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span lang="ja">クラブウィンダム 千曲館 長野（Googleマップ）</span>
+                <span lang="en">Club Wyndham Chikumakan (Map)</span>
+              </a>
+            </div>
           </li>
         </ol>
       </article>
@@ -1497,14 +1487,21 @@
           <li class="timeline-item">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="time-badge">14:00 – 15:00</span>
-            <h4 class="spot-title" lang="ja">星野エリア出発 → 上山田温泉のホテルへチェックイン（6名合流）</h4>
-            <h4 class="spot-title" lang="en">Depart Hoshino Area → Check in at Kamiyamada Onsen Hotel</h4>
+            <h4 class="spot-title" lang="ja">星野エリア出発 → 「クラブウィンダム 千曲館 長野」へチェックイン（6名合流）</h4>
+            <h4 class="spot-title" lang="en">Depart Hoshino Area → Check in at Club Wyndham Chikumakan Nagano</h4>
             <p class="spot-desc" lang="ja">
-              中軽井沢エリアから浅間サンライン経由で「小諸IC」へ出られるため、軽井沢駅発より約10〜15分短縮でき、約55〜60分で上山田温泉に到着します。
+              中軽井沢エリアから浅間サンライン経由で「小諸IC」へ出られるため、軽井沢駅発より約10〜15分短縮でき、約55〜60分で「クラブウィンダム 千曲館 長野」に到着します。
             </p>
             <p class="spot-desc" lang="en">
-              Starting from Naka-Karuizawa saves 10–15 minutes heading west; take Asama Sunline to Komoro IC and exit at Sakaki IC (~55–60 min total).
+              Starting from Naka-Karuizawa saves 10–15 minutes heading west; take Asama Sunline to Komoro IC and exit at Sakaki IC (~55–60 min total to Club Wyndham Chikumakan Nagano).
             </p>
+            <div class="spot-actions">
+              <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AF%E3%83%A9%E3%83%96%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%80%E3%83%A0%E5%8D%83%E6%9B%B2%E9%A4%A8+%E9%95%B7%E9%87%8E+%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8D%83%E6%9B%B2%E5%B8%82%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%891-33-4" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span lang="ja">クラブウィンダム 千曲館 長野（Googleマップ）</span>
+                <span lang="en">Club Wyndham Chikumakan (Map)</span>
+              </a>
+            </div>
           </li>
         </ol>
       </article>
@@ -1632,44 +1629,92 @@
           <li class="timeline-item">
             <span class="timeline-dot" aria-hidden="true"></span>
             <span class="time-badge">14:05 – 15:00</span>
-            <h4 class="spot-title" lang="ja">御代田を出発 → 上山田温泉のホテルへチェックイン（6名合流）</h4>
-            <h4 class="spot-title" lang="en">Depart Miyota → Check in at Kamiyamada Onsen Hotel</h4>
+            <h4 class="spot-title" lang="ja">御代田を出発 → 「クラブウィンダム 千曲館 長野」へチェックイン（6名合流）</h4>
+            <h4 class="spot-title" lang="en">Depart Miyota → Check in at Club Wyndham Chikumakan Nagano</h4>
             <p class="spot-desc" lang="ja">
-              MMoPから上信越道「小諸IC」までは車で約15分。坂城IC経由でトータル約45〜50分で上山田温泉に到着します。
+              MMoPから上信越道「小諸IC」までは車で約15分。坂城IC経由でトータル約45〜50分で「クラブウィンダム 千曲館 長野」に到着します。
             </p>
             <p class="spot-desc" lang="en">
-              Komoro IC is just 15 minutes from MMoP, making it an easy 45–50 minute total drive via Sakaki IC to Kamiyamada Onsen.
+              Komoro IC is just 15 minutes from MMoP, making it an easy 45–50 minute total drive via Sakaki IC to Club Wyndham Chikumakan Nagano.
             </p>
+            <div class="spot-actions">
+              <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AF%E3%83%A9%E3%83%96%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%80%E3%83%A0%E5%8D%83%E6%9B%B2%E9%A4%A8+%E9%95%B7%E9%87%8E+%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8D%83%E6%9B%B2%E5%B8%82%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%891-33-4" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span lang="ja">クラブウィンダム 千曲館 長野（Googleマップ）</span>
+                <span lang="en">Club Wyndham Chikumakan (Map)</span>
+              </a>
+            </div>
           </li>
         </ol>
       </article>
     </section>
 
-    <!-- 15:00 Onsen Finale Visual Card -->
+    <!-- 15:00 Hotel Guide: Club Wyndham Chikumakan Nagano -->
     <section aria-labelledby="onsen-heading">
       <div class="onsen-finale-card">
-        <div class="onsen-img-wrap">
-          <img src="./images/onsen.jpg" alt="Japanese outdoor hot spring bath in winter Nagano">
+        <span class="onsen-kicker">15:00 Check-in · Family Reunion (All 6 Members)</span>
+        <h2 id="onsen-heading" class="onsen-title">
+          <span lang="ja">ご宿泊先：クラブウィンダム 千曲館 長野（戸倉上山田温泉）</span>
+          <span lang="en">Hotel: Club Wyndham Chikumakan Nagano (Togura Kamiyamada Onsen)</span>
+        </h2>
+
+        <p class="onsen-desc" lang="ja">
+          軽井沢での冬散歩を楽しんだあとは、美肌の湯として名高い戸倉上山田温泉の和モダン旅館<strong>「クラブウィンダム 千曲館 長野」</strong>へ。<strong>「二本の源泉・六つの湯殿」すべて源泉かけ流し</strong>の露天風呂や大浴場、風情ある日本庭園と信州の味覚が自慢のお宿です。ここでご家族2名とも合流し、6名全員そろってクリスマスの夜をゆっくりお楽しみください！
+        </p>
+        <p class="onsen-desc" lang="en">
+          After exploring winter Karuizawa, head to <strong>Club Wyndham Chikumakan Nagano</strong> in Togura Kamiyamada Onsen—renowned for its skin-beautifying waters. Blending traditional Japanese ryokan charm with modern comfort, the property features <strong>free-flowing natural hot springs from two sources across six indoor and open-air baths</strong>, a tranquil Japanese garden, and seasonal Shinshu cuisine—where all six family members reunite for Christmas evening.
+        </p>
+
+        <div class="photo-showcase two-col">
+          <figure class="photo-figure">
+            <img src="./images/chikumakan.jpg" alt="Japanese courtyard garden and warm sukiya ryokan lounge in winter">
+            <figcaption class="photo-caption">
+              <span lang="ja">落ち着きある和モダンの館内と雪景色の日本庭園（イメージ）</span>
+              <span lang="en">Tranquil Japanese garden &amp; classic ryokan ambiance</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-figure">
+            <img src="./images/onsen.jpg" alt="Steaming natural outdoor hot spring stone bath in winter Nagano">
+            <figcaption class="photo-caption">
+              <span lang="ja">美肌の湯・源泉かけ流しの露天風呂（イメージ）</span>
+              <span lang="en">Free-flowing natural mineral open-air bath</span>
+            </figcaption>
+          </figure>
         </div>
-        <div class="onsen-content">
-          <span class="onsen-kicker">15:00 Check-in · Family Reunion</span>
-          <h2 id="onsen-heading" class="onsen-title">
-            <span lang="ja">15:00頃 戸倉上山田温泉のホテルへ！ご家族6名全員合流</span>
-            <span lang="en">~15:00 Arrive at Kamiyamada Onsen · All 6 Reunite!</span>
-          </h2>
-          <p class="onsen-desc" lang="ja">
-            軽井沢での冬散歩を楽しんだあとは、美肌の湯として名高い「戸倉上山田温泉」へ。ホテルでご家族2名とも合流し、6名全員そろって温泉とクリスマスの夜をゆっくりお楽しみください。
-          </p>
-          <p class="onsen-desc" lang="en">
-            After exploring winter Karuizawa, unwind in therenowned mineral waters of Togura Kamiyamada Onsen—where the rest of the family joins for a cozy Christmas evening together.
-          </p>
-          <div class="spot-actions">
-            <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E6%88%B8%E5%80%89%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span lang="ja">戸倉上山田温泉エリア（Googleマップ）</span>
-              <span lang="en">Kamiyamada Onsen Area (Map)</span>
-            </a>
-          </div>
+
+        <div class="onsen-meta-list">
+          <span class="metric-chip" lang="ja">チェックイン：15:00〜</span>
+          <span class="metric-chip" lang="en">Check-in: From 15:00</span>
+          <span class="metric-chip" lang="ja">駐車場：敷地内無料駐車場あり</span>
+          <span class="metric-chip" lang="en">Parking: Free on-site parking</span>
+          <span class="metric-chip" lang="ja">アクセス：上信越道「坂城IC」より車約15分</span>
+          <span class="metric-chip" lang="en">Access: ~15 min from Sakaki IC</span>
+        </div>
+
+        <p class="onsen-address">
+          <strong lang="ja">所在地：</strong><span lang="ja">〒389-0821 長野県千曲市上山田温泉1丁目33-4（TEL: 026-275-1111）</span>
+          <strong lang="en">Address: </strong><span lang="en">1-33-4 Kamiyamada Onsen, Chikuma-shi, Nagano 389-0821 (Tel: +81-26-275-1111)</span>
+        </p>
+
+        <div class="spot-actions">
+          <a class="action-link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AF%E3%83%A9%E3%83%96%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%80%E3%83%A0%E5%8D%83%E6%9B%B2%E9%A4%A8+%E9%95%B7%E9%87%8E+%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8D%83%E6%9B%B2%E5%B8%82%E4%B8%8A%E5%B1%B1%E7%94%B0%E6%B8%A9%E6%B3%891-33-4" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span lang="ja">クラブウィンダム 千曲館 長野（Googleマップ）</span>
+            <span lang="en">Open in Google Maps</span>
+          </a>
+          <a class="action-link" lang="ja" href="https://www.clubwyndhamchikumakan.com/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span>公式ホームページ</span>
+          </a>
+          <a class="action-link" lang="en" href="https://www.clubwyndhamchikumakan.com/en/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span>Official Website (English)</span>
+          </a>
+          <a class="action-link" href="tel:026-275-1111">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span lang="ja">電話 026-275-1111</span>
+            <span lang="en">Call 026-275-1111</span>
+          </a>
         </div>
       </div>
     </section>
